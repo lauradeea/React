@@ -1,4 +1,5 @@
 import './ExpenseItem.css';
+import ExpanseDate from "./ExpenseDate";
 
 //the value props (or data or whatever we want) is a value which holds all the values we get for the attributes on our custom element on App.js
 //we get key-value pairs in this props object which is passed in by react automatically
@@ -14,7 +15,7 @@ function ExpenseItem(props) {
 
     return (
         <div className="expense-item">
-            <div>{props.date.toISOString()}</div>
+            <ExpanseDate date={props.date} />
             <div className="expense-item__description">
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
