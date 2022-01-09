@@ -10,16 +10,27 @@ import ExpanseDate from "./ExpenseDate";
 //But the important part here is that data with props are being passed in a uni-directional flow. (one way from parent to child)
 //Furthermore, props data is read-only, which means that data coming from the parent should not be changed by child components.
 
+// a compoment its just a reagular function withc just returns JSX
+
 
 function ExpenseItem(props) {
+
+
+    let title = props.title;
+    const clickHandler = () => {
+      title = "updated";
+    };
 
     return (
         <div className="expense-item">
             <ExpanseDate date={props.date} />
             <div className="expense-item__description">
-                <h2>{props.title}</h2>
+                <h2>{title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
+            {/*add a props as a onCLick event*/}
+            {/*only call the function but not to run here but react will execute that function for us whan thaty event occurs*/}
+            <button onClick={clickHandler}>Change Title</button>
         </div>
     );
 }
