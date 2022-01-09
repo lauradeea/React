@@ -12,6 +12,8 @@ import ExpanseDate from "./ExpenseDate";
 
 // a compoment its just a reagular function withc just returns JSX
 
+// when react run all the compoments and finished , dont return from begin. Just stop So :
+// STATE -> if something changed in code and a compoment should be re-evaluated
 
 function ExpenseItem(props) {
 
