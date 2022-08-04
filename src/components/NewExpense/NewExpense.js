@@ -13,7 +13,7 @@ function NewExpense(props) {
   };
 
   return (
-    <div className="new-expense test">
+    <div className="new-expense test pali">
       <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
     </div>
   );
