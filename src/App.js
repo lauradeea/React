@@ -38,7 +38,7 @@ function App(props) {
       <h2>Let's get started!</h2>
       <NewExpense onExpenseData={newExpenceHandler} />
       <Expenses items={expenses} />
-      <ExpenseForm2 />
+
     </div>
   );
 }
