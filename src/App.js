@@ -1,6 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
-import ExpenseForm2 from "./components/Expenses/ExpenseForm2";
 function App(props) {
   const expenses = [
     {
