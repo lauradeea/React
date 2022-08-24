@@ -32,6 +32,7 @@ function App(props) {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const newExpenceHandler = (expense) => {
+    console.log(expense);
     setExpenses((prexExpenses) => {
       return [expense, ...prexExpenses];
     });
@@ -39,7 +40,6 @@ function App(props) {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
       <NewExpense onExpenseData={newExpenceHandler} />
       <Expenses items={expenses} />
     </div>
