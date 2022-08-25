@@ -29,16 +29,18 @@ function ExpenseItem(props) {
   };
 
   return (
-    <div className="expense-item">
-      <ExpanseDate date={props.date} />
-      <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
+    <li>
+      <div className="expense-item">
+        <ExpanseDate date={props.date} />
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+        {/*add a props as a onCLick event*/}
+        {/*only call the function but not to run here but react will execute that function for us whan thaty event occurs*/}
+        <button>Change Title</button>
       </div>
-      {/*add a props as a onCLick event*/}
-      {/*only call the function but not to run here but react will execute that function for us whan thaty event occurs*/}
-      <button>Change Title</button>
-    </div>
+    </li>
   );
 }
 
