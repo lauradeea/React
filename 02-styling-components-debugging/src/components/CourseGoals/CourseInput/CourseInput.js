@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import "./CourseInput.css";
+
 import Button from "../../UI/Button/Button";
+import "./CourseInput.css";
 
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
+
   const goalInputChangeHandler = (event) => {
     setEnteredValue(event.target.value);
   };
 
-  const formSubmitHandler = (e) => {
-    e.preventDefault();
-    const inputValue = {
-      input: enteredValue,
-    };
-
-    console.log(inputValue);
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+    props.onAddGoal(enteredValue);
   };
 
   return (
