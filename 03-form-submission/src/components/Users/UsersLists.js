@@ -5,10 +5,10 @@ import classes from "./UsersLists.module.css";
 const UsersLists = (props) => {
   return (
     // users is an array of user objects when ever object has a name property and an age property
-    <Card classeName={classes.users}>
+    <Card className={classes.users}>
       <ul>
         {props.users.map((user) => (
-          <li>
+          <li key={user.id}>
             {user.name} ({user.age} years old)
           </li>
         ))}
