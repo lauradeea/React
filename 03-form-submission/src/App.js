@@ -14,11 +14,11 @@ function App(props) {
   };
 
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHandler} />
       {/* set to an array */}
       <UsersLists users={usersList} />
-    </div>
+    </>
   );
 }
 
