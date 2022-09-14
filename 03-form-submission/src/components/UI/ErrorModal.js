@@ -23,7 +23,22 @@ const ModalOvery = (props) => {
   );
 };
 const ErrorModal = (props) => {
-  return <>{ReactDOM.createPortal(<Backdrop onConfirm={props.onConfirm} />)}</>;
+  return (
+    <>
+      {ReactDOM.createPortal(
+        <Backdrop onConfirm={props.onConfirm} />,
+        document.getElementById("backdrop-root")
+      )}
+      {ReactDOM.createPortal(
+        <ModalOvery
+          title={props.title}
+          message={props.message}
+          onConfirm={props.onConfirm}
+        />,
+        document.getElementById("overlay-root")
+      )}
+    </>
+  );
 };
 
 export default ErrorModal;
