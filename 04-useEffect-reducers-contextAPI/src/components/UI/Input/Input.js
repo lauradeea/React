@@ -1,6 +1,8 @@
 import React, { useRef, useImperativeHandle } from "react";
 import classes from "./Input.module.css";
 
+//forwardRef a method to which we parse out coumponent function
+//our component function is an argument to forwardRef and we return it and its beign bound to a ref
 const Input = React.forwardRef((props, ref) => {
   const inputRef = useRef();
 
