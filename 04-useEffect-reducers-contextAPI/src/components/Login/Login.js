@@ -48,7 +48,6 @@ const Login = (props) => {
     isValid: false,
   });
   const ctx = useContext(AuthContext);
-
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
