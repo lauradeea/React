@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import ReactDOM from "react-dom"; //for a portal
+import ReactDOM from "react-dom";
 import classes from "./Modal.module.css";
 
 const Backdrop = (props) => {
