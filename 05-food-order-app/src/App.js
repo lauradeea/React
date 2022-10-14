@@ -5,9 +5,16 @@ import Cart from "./components/Cart/Cart";
 function App() {
   const [cartIsShow, setCartIsShow] = useState(false);
 
+  const showCartHanfle = () => {
+    setCartIsShow(true);
+  };
+  const hideCartHanfle = () => {
+    setCartIsShow(false);
+  };
+
   return (
     <div>
-      <Cart />
+      {showCartHanfle && <Cart />}
       <Header />
       <main>
         <Meals />
