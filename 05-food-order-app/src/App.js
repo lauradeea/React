@@ -5,7 +5,7 @@ import Cart from "./components/Cart/Cart";
 function App() {
   const [cartIsShow, setCartIsShow] = useState(false);
 
-  const showCartHanfle = () => {
+  const showCartHandler = () => {
     setCartIsShow(true);
   };
   const hideCartHanfle = () => {
@@ -14,8 +14,8 @@ function App() {
 
   return (
     <div>
-      {showCartHanfle && <Cart />}
-      <Header />
+      {cartIsShow && <Cart />}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
