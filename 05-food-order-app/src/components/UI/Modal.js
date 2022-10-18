@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Modal.module.css";
 
+//received props because will receive data
 const Backdrop = (props) => {
   return <div className={classes.backdrop} />;
 };
