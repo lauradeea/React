@@ -14,7 +14,7 @@ import ExpanseDate from "./ExpenseDate";
 //But the important part here is that data with props are being passed in a uni-directional flow. (one way from parent to child)
 //Furthermore, props data is read-only, which means that data coming from the parent should not be changed by child components.
 
-// a compoment its just a reagular function withc just returns JSX
+// a compoment its just a reagular function which just returns JSX
 
 // when react run all the compoments and finished , dont return from begin. Just stop So :
 // STATE -> if something changed in code and a compoment should be re-evaluated
