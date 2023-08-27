@@ -11,11 +11,13 @@ const Users = (props) => {
   };
 
   const usersList = (
-    <ul>
-      {props.users.map((user) => (
-        <User key={user.id} name={user.name} />
-      ))}
-    </ul>
+    <div className={classes.scrollableList}>
+      <ul>
+        {props.users.map((user) => (
+          <User key={user.id} name={user.name} />
+        ))}
+      </ul>
+    </div>
   );
 
   return (

@@ -44,6 +44,7 @@ const UserFinder = () => {
       <div className={classes.finder}>
         <input type="search" onChange={searchChangeHandler} />
       </div>
+
       <Users users={filteredUsers} />
     </Fragment>
   );
