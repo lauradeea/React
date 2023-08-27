@@ -5,14 +5,14 @@ import classes from "./Users.module.css";
 
 const Users = (props) => {
   const [showUsers, setShowUsers] = useState(true);
-  const [selectedUserId, setSelectedUserId] = useState(null);
+  const [selectedUserName, setSelectedUserName] = useState(null);
 
   const toggleUsersHandler = () => {
     setShowUsers((curState) => !curState);
   };
 
-  const handleUserClick = (userId) => {
-    setSelectedUserId(userId);
+  const handleUserClick = (userName) => {
+    setSelectedUserName(userName);
   };
 
   const usersList = (
@@ -36,7 +36,7 @@ const Users = (props) => {
         {showUsers ? "Hide" : "Show"} Cars
       </button>
       {showUsers && usersList}
-      {selectedUserId && <p>Selected user ID: {selectedUserId}</p>}
+      {selectedUserName && <p>{selectedUserName}</p>}
     </div>
   );
 };
