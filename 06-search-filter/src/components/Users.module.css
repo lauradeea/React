@@ -2,7 +2,7 @@
   margin: 2rem auto;
   background-color: #d8e1ec;
   padding: 1rem;
-  max-width: 40rem;
+  width: 40rem;
   text-align: center;
   padding: 2rem;
 }
@@ -11,20 +11,26 @@
   list-style: none;
   margin: 0;
   padding: 0.5rem;
-  max-height: 160px; /* Adjust this value as needed */
+  height: 160px; /* Adjust this value as needed */
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .users .list {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
 }
+.users .list span {
+  padding-top: 0.5rem;
+}
 .scrollableList {
   border: 1px solid #fff;
   background-color: #d9e1e9;
   padding: 0.5rem 0.5rem 1rem 1rem;
   border-radius: 10px;
-  width: fit-content;
+  width: 15rem;
   margin: 0 auto;
   text-align: start;
 }

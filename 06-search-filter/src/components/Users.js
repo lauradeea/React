@@ -29,6 +29,7 @@ const Users = (props) => {
             key={user.id}
             id={user.id}
             name={user.name}
+            image={user.image}
             isSelected={selectedUserName.includes(user.name)}
             onUserClick={handleUserClick}
           />

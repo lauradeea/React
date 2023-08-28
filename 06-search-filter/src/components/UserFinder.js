@@ -2,6 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 
 import Users from "./Users";
 import classes from "./UserFinder.module.css";
+import eventsImage from "../assets/images/emptyfolder.png";
 
 const DUMMY_USERS = [
   { id: "u1", name: "Chevrolet Camaro" },
@@ -28,6 +29,7 @@ const UserFinder = () => {
         {
           id: "no-data",
           name: "No Data",
+          image: eventsImage,
         },
       ]);
     } else {

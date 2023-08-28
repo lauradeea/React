@@ -7,7 +7,14 @@ const User = (props) => {
 
   return (
     <li className={itemClassName} onClick={() => props.onUserClick(props.name)}>
-      {props.name}
+      {props.id !== "no-data" ? (
+        <>{props.name}</>
+      ) : (
+        <div className={classes.noData}>
+          <img src={props.image} alt="No Data" />
+          <span>{props.name}</span>
+        </div>
+      )}
     </li>
   );
 };
