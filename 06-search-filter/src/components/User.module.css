@@ -1,4 +1,12 @@
 .user {
-  margin: 0.5rem 0;
-  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.selected {
+  background-color: #132f3c;
+  color: white;
+}
+.user:hover {
+  background-color: #132f3c;
+  color: white;
 }

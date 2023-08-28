@@ -5,14 +5,20 @@ import classes from "./Users.module.css";
 
 const Users = (props) => {
   const [showUsers, setShowUsers] = useState(true);
-  const [selectedUserName, setSelectedUserName] = useState(null);
+  const [selectedUserName, setSelectedUserName] = useState([]);
 
   const toggleUsersHandler = () => {
     setShowUsers((curState) => !curState);
   };
 
   const handleUserClick = (userName) => {
-    setSelectedUserName(userName);
+    setSelectedUserName((prevUserNames) => {
+      if (prevUserNames.includes(userName)) {
+        return prevUserNames.filter((name) => name !== userName);
+      } else {
+        return [...prevUserNames, userName];
+      }
+    });
   };
 
   const usersList = (
@@ -23,6 +29,7 @@ const Users = (props) => {
             key={user.id}
             id={user.id}
             name={user.name}
+            isSelected={selectedUserName.includes(user.name)}
             onUserClick={handleUserClick}
           />
         ))}
@@ -35,8 +42,18 @@ const Users = (props) => {
       <button onClick={toggleUsersHandler}>
         {showUsers ? "Hide" : "Show"} Cars
       </button>
+
       {showUsers && usersList}
-      {selectedUserName && <p>{selectedUserName}</p>}
+
+      {selectedUserName && (
+        <div className={classes.list}>
+          {selectedUserName.map((name) => (
+            <span key={name} className={classes.selectedUser}>
+              {name}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

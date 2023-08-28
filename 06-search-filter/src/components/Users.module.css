@@ -10,12 +10,15 @@
 .users ul {
   list-style: none;
   margin: 0;
-  padding: 0;
-  padding: 0 0.5rem;
-  max-height: 120px; /* Adjust this value as needed */
+  padding: 0.5rem;
+  max-height: 160px; /* Adjust this value as needed */
   overflow-y: auto;
 }
-
+.users .list {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
 .scrollableList {
   border: 1px solid #fff;
   background-color: #d9e1e9;
