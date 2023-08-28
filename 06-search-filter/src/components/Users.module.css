@@ -1,16 +1,21 @@
 .users {
-  margin: 2rem auto;
-  background-color: #d8e1ec;
-  padding: 1rem;
-  width: 40rem;
-  text-align: center;
-  padding: 2rem;
+  margin: 1rem auto;
+}
+.scrollableList {
+  border: 1px solid #fff;
+  background-color: #d9e1e9;
+  box-shadow: 1px 1px 10px 1px #aeaeae;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 10px;
+  width: 15rem;
+  margin: 0 auto;
+  text-align: start;
 }
 
 .users ul {
   list-style: none;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0;
   height: 160px; /* Adjust this value as needed */
   overflow-y: auto;
   display: flex;
@@ -24,13 +29,4 @@
 }
 .users .list span {
   padding-top: 0.5rem;
-}
-.scrollableList {
-  border: 1px solid #fff;
-  background-color: #d9e1e9;
-  padding: 0.5rem 0.5rem 1rem 1rem;
-  border-radius: 10px;
-  width: 15rem;
-  margin: 0 auto;
-  text-align: start;
 }

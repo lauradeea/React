@@ -1,8 +1,26 @@
 .finder {
   margin: 2rem auto;
-  background-color: white;
   padding: 1rem;
-  border-radius: 12px;
-  max-width: 40rem;
+  max-width: 20rem;
   text-align: center;
+  background-color: #d8e1ec;
+}
+
+input {
+  height: 50px;
+  border-radius: 10px;
+  width: 15rem;
+  padding: 1rem;
+  border: 1px solid #fff;
+  background-color: #d9e1e9;
+  box-shadow: 1px 1px 10px 1px #aeaeae;
+}
+input:focus {
+  border: 1px solid #fff;
+}
+input:active {
+  border: 1px solid #fff;
+}
+input:focus-visible {
+  outline: 0;
 }

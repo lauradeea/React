@@ -4,12 +4,7 @@ import User from "./User";
 import classes from "./Users.module.css";
 
 const Users = (props) => {
-  const [showUsers, setShowUsers] = useState(true);
   const [selectedUserName, setSelectedUserName] = useState([]);
-
-  const toggleUsersHandler = () => {
-    setShowUsers((curState) => !curState);
-  };
 
   const handleUserClick = (userName) => {
     setSelectedUserName((prevUserNames) => {
@@ -40,11 +35,7 @@ const Users = (props) => {
 
   return (
     <div className={classes.users}>
-      <button onClick={toggleUsersHandler}>
-        {showUsers ? "Hide" : "Show"} Cars
-      </button>
-
-      {showUsers && usersList}
+      {usersList}
 
       {selectedUserName && (
         <div className={classes.list}>

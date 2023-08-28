@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 
 import Users from "./Users";
 import classes from "./UserFinder.module.css";
@@ -14,10 +14,12 @@ const DUMMY_USERS = [
   { id: "u7", name: "Volkswagen T-Cross" },
   { id: "u8", name: "Volkswagen Tiguan" },
 ];
-
 const UserFinder = () => {
   const [filteredUsers, setFilteredUsers] = useState(DUMMY_USERS);
   const [searchTerm, setSearchTerm] = useState("");
+  const [usersVisible, setUsersVisible] = useState(false); // State for controlling visibility
+
+  const inputRef = useRef(null); // Reference to the input element
 
   useEffect(() => {
     const filtered = DUMMY_USERS.filter((user) =>
@@ -39,6 +41,11 @@ const UserFinder = () => {
 
   const searchChangeHandler = (event) => {
     setSearchTerm(event.target.value);
+    setUsersVisible(true); // Show the Users component when typing
+  };
+
+  const showButtonFilter = () => {
+    setUsersVisible(true); // Toggle visibility when clicking the input
   };
 
   return (
@@ -46,12 +53,14 @@ const UserFinder = () => {
       <div className={classes.finder}>
         <input
           type="search"
+          ref={inputRef}
+          onClick={showButtonFilter}
           onChange={searchChangeHandler}
           placeholder="Cars"
         />
+        {usersVisible && <Users users={filteredUsers} />}
+        {/* Render Users component conditionally */}
       </div>
-
-      <Users users={filteredUsers} />
     </Fragment>
   );
 };
