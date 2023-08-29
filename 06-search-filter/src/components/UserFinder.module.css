@@ -24,3 +24,31 @@ input:active {
 input:focus-visible {
   outline: 0;
 }
+
+.inputField {
+  position: relative;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+}
+
+.arrowUp {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #000 transparent;
+}
+
+.arrowDown {
+  border-width: 8px 8px 0 8px;
+  border-color: #000 transparent transparent transparent;
+}
+.invalidInput {
+  border-color: red;
+}
