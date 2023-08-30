@@ -80,6 +80,7 @@ const UserFinder = () => {
             onClick={showButtonFilter}
             onChange={searchChangeHandler}
             placeholder="Cars"
+            required
           />
           <div
             className={`${classes.arrow} ${

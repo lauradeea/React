@@ -49,6 +49,3 @@ input:focus-visible {
   border-width: 8px 8px 0 8px;
   border-color: #000 transparent transparent transparent;
 }
-.invalidInput {
-  border-color: red;
-}
