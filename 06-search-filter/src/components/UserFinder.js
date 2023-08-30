@@ -74,14 +74,16 @@ const UserFinder = () => {
     <Fragment>
       <div className={classes.finder} ref={dropdownRef}>
         <div className={classes.inputField}>
-          <input
-            type="search"
-            ref={inputRef}
-            onClick={showButtonFilter}
-            onChange={searchChangeHandler}
-            placeholder="Cars"
-            required
-          />
+          <div className={classes.floatingroup}>
+            <input
+              type="search"
+              ref={inputRef}
+              onClick={showButtonFilter}
+              onChange={searchChangeHandler}
+              required
+            />
+            <label className={classes.floatinglabel}>Cars</label>
+          </div>
           <div
             className={`${classes.arrow} ${
               usersVisible ? classes.arrowUp : classes.arrowDown
