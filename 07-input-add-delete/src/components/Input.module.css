@@ -1,0 +1,27 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 3rem auto;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  background-color: white;
+}
+label {
+  margin-bottom: 0.5rem;
+}
+input {
+  height: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+}
+button {
+  background-color: #790a42;
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  border: 0;
+  color: white;
+}

@@ -1,7 +1,12 @@
 import React from "react";
+import Input from "./components/Input";
 
 function App() {
-  return <>here</>;
+  return (
+    <>
+      <Input />
+    </>
+  );
 }
 
 export default App;
