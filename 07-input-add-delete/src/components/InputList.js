@@ -1,8 +1,12 @@
+import InputItem from "./InputItem";
+
 const InputList = (props) => {
   return (
     <>
-      <ul>
-        <li></li>
+      <ul className="goal-list">
+        {props.items.map((goal) => (
+          <InputItem key={goal.id} name={goal.name} />
+        ))}
       </ul>
     </>
   );
