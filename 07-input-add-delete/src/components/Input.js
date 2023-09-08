@@ -7,6 +7,12 @@ const Input = (props) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
     console.log("Click on button");
+
+    const enteredData = {
+      text: enteredValue,
+    };
+    console.log(enteredData);
+    setEnteredValue("");
   };
   const inputFormHandler = (event) => {
     const value = event.target.value;
@@ -18,10 +24,14 @@ const Input = (props) => {
     <form onSubmit={formSubmitHandler}>
       <div className={classes.inputWrapper}>
         <label>Input Goal</label>
-        <input type="text" placeholder="Goal" onChange={inputFormHandler} />
+        <input
+          type="text"
+          value={enteredValue}
+          placeholder="Goal"
+          onChange={inputFormHandler}
+        />
         <button type="submit">Add Goals</button>
       </div>
-      {enteredValue}
     </form>
   );
 };
